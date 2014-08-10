@@ -64,3 +64,4 @@ Au clic sur un lien (par exemple : News, pour le campus de Montpellier) :
 * Projects
 * Renting
 * Todo List
+* (User's) Settings
