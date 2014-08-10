@@ -12,7 +12,10 @@ __10/08/14__ : Jerome - Ajout des fonctionnalités principales.
 * Comprendre git : [https://rogerdudler.github.io/git-guide/index.fr.html](https://rogerdudler.github.io/git-guide/index.fr.html)
 * Le _feature branch workflow_ : [https://www.atlassian.com/fr/git/workflows#!workflow-feature-branch](https://www.atlassian.com/fr/git/workflows#!workflow-feature-branch)
 * Pour chaque module (logs, meetings, new etc...) on crée une nouvelle branche, et quand elle est terminée, on merge la branche avec master
-* La page de news est la page chargée par defaut (sauf objections)
+* La page de news est la page chargée par defaut (sauf objections de ta part)
+* Editeur intégré : [Quill](http://quilljs.com/) (Sauf si on trouve mieux)
+* [Doc du framework Bootstrap](http://getbootstrap.com/css/#grid)
+* Pour envoyer des mails : [PHPMailer](https://github.com/PHPMailer/PHPMailer), il est deja integre dans le projet.
 
 ## Notes
 * Les classe _srand_ et _passwordHash_ seront utilisées pour hasher les mot de passe des utilisateurs.
