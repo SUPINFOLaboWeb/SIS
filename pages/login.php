@@ -11,7 +11,7 @@
 		<div class="col-md-12">
 			<div class="wrap">
 				<p class="form-title">Sign In</p>
-				<form class="login" action="auth.php" method="POST">
+				<form class="login" action="authentication.php" method="POST">
 					<input type="text" placeholder="Username" />
 					<input type="password" placeholder="Password" />
 					<input type="submit" value="Sign In" class="btn btn-success btn-sm" />

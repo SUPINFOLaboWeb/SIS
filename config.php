@@ -25,5 +25,6 @@
 		"todo"		=> "Todo List"
 	];
 
+	// Pendant le developpement seulement :
 	setcookie('defaultCampus', 'grenoble');
 ?>
