@@ -19,8 +19,8 @@ __10/08/14__ : Jerome - Ajout des fonctionnalités principales.
 	* charger un fichier pour une seule page et pas pour toutes les pages (méthode _addStyleSheet_)
 	* changer le titre de chaque page (méthode _setTitle_)
 
-```
-// L'objet head est instancie dans head.php
+```php
+// L'objet head est instancie dans head.php  
 require_once '../includes/head.php';
 
 // Optionnel
