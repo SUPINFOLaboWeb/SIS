@@ -14,11 +14,11 @@ __10/08/14__ : Jerome - Ajout des fonctionnalités principales.
 * Pour chaque module (logs, meetings, new etc...) on crée une nouvelle branche, et quand elle est terminée, on merge la branche avec master
 * La page de news est la page chargée par defaut (sauf objections de ta part)
 * Editeur intégré : [Quill](http://quilljs.com/) (Sauf si on trouve mieux)
-* [Doc du framework Bootstrap](http://getbootstrap.com/css/#grid)
-* Pour envoyer des mails : [PHPMailer](https://github.com/PHPMailer/PHPMailer), il est deja integre dans le projet.
+* [Doc du framework Bootstrap](http://getbootstrap.com)
+* Pour envoyer des mails : [PHPMailer](https://github.com/PHPMailer/PHPMailer), il est déjà intégré dans le projet.
 
 ## Notes
-* Les classe _srand_ et _passwordHash_ seront utilisées pour hasher les mot de passe des utilisateurs.
+* Les classes _srand_ et _passwordHash_ seront utilisées pour hasher les mot de passe des utilisateurs.
 * La classe _head_ : je sais pas trop si c'est une bonne pratique ou pas du tout x/ mais elle permet d'avoir un header dynamique : 
 	* charger un fichier pour une seule page et pas pour toutes les pages (méthode _addStyleSheet_)
 	* changer le titre de chaque page (méthode _setTitle_)
