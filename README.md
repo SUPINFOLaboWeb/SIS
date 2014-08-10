@@ -8,6 +8,7 @@ __10/08/14__ : Jerome - Ajout des fonctionnalités principales.
 
 ## Général
 
+* Le markdown : [https://help.github.com/articles/github-flavored-markdown](https://help.github.com/articles/github-flavored-markdown)
 * Comprendre git : [https://rogerdudler.github.io/git-guide/index.fr.html](https://rogerdudler.github.io/git-guide/index.fr.html)
 * Le _feature branch workflow_ : [https://www.atlassian.com/fr/git/workflows#!workflow-feature-branch](https://www.atlassian.com/fr/git/workflows#!workflow-feature-branch)
 * Pour chaque module (logs, meetings, new etc...) on crée une nouvelle branche, et quand elle est terminée, on merge la branche avec master
