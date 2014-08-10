@@ -46,3 +46,16 @@ Au clic sur un lien (par exemple : News, pour le campus de Montpellier) :
 * Envoyer a _loadPage.php_ en POST les parametres recupérés (campus et page) avec la méthode _loadPageContent_ (appel AJAX)
 * Si l'appel AJAX est un succès, vider le conteu de la div _main_ et y afficher le contenu retourné par l'appel AJAX (variable _data_ )
 * Sinon, afficher une alerte
+
+
+## Todo
+
+* ~~Core~~
+* Files
+* Inventory
+* Logs
+* Meetings
+* News
+* Projects
+* Renting
+* Todo List
