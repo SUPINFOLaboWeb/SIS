@@ -1,24 +1,12 @@
 /*****************************************
 				General
 *****************************************/
-	
-/* 
- * Retourne le nom du campus actuel (depuis la barre du haut)
- */
-
 function getActualCampusName() {
 	return $('.navbar .campus').text().toUpperCase();
 }
 /*****************************************
 				Sidebar/Navbar
 *****************************************/
-
-/* 
- * Demande a 'loadPage.php' de charger la page 'pageName' pour le campus 'campus'.
- * Si le chargement s'effectue, le contenu de la page demandee pour le campus choisi
- * est ajoute a la div 'main'.
- * Sinon une erreur est affichee.
- */
 
 function loadPageContent(campus, pageName) {
 	$.ajax({
@@ -36,24 +24,13 @@ function loadPageContent(campus, pageName) {
 	});
 }
 
-/*
- * Afficher dans la navbar le nom du campus
- * Permet de savoir en permanance sur quel campus l'utilisateur navigue.
- */
 function addCampusToNavBar(campusName) {
 	var campus 		= $(campusName).attr('id');
 	$('.navbar .campus').text(campus);
 }
-
-
 /*****************************************
 				Cookies
 *****************************************/
-/*
- * Pour gerer les cookies en JS.
- * Faut retrouver la source sur Internet.
- */
-
 function setCookie(name, value, days) {
 	if (days) {
 		var date 	= new Date();
@@ -81,4 +58,23 @@ function getCookie(name) {
 
 function deleteCookie(name) {
 	setCookie(name,"",-1);
+}
+
+/*****************************************
+				Todo
+*****************************************/
+function createTodo(name, content) {
+	var campus = getActualCampusName();
+	console.log(campus);
+	$.ajax({
+		url: 'dbActionTodo.php',
+		type: 'POST',
+		data: 'name=' + name + '&content=' + content + '&campus' + campus + '&action=create',
+		success: function(data) {
+			loadPageContent(campus, 'todo');
+		},
+		error: function(data) {
+			alert('ERROR : Unable to create new todo');
+		}
+	});
 }

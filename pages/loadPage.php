@@ -2,41 +2,41 @@
 	
 	require '../config.php';
 
-	switch ($_POST['page']) {	
-		case 'files' :
-			require 'files.php';
+	switch ($_POST['page']) {
+		case 'dashboard' :
+			require "home.php";
 			break;
-
-		case 'inventory' :
-			require 'inventory.php';
+	
+		case 'log' :
+			require "log.php";
 			break;
-
-		case 'logs' :
-			require 'logs.php';
-			break;
-
-		case 'meetings' :
-			require 'meetings.php';
-			break;
-
-		case 'news' :
-			require 'news.php';
-			break;
-
+			
 		case 'projects' :
-			require 'projects.php';
+			require "projects.php";
 			break;
-
-		case 'renting' :
-			require 'renting.php';
-			break;
-
+			
 		case 'todo' :
-			require 'todo.php';
+			require "todo.php";
 			break;
-
+			
+		case 'monitoring' :
+			require "monitoring.php";
+			break;
+			
+		case 'inventory' :
+			require "inventory.php";
+			break;
+			
+		case 'renting' :
+			require "renting.php";
+			break;
+			
+		case 'members' :
+			require "members.php";
+			break;
+		
 		default:
-			require "news.php";
+			require "home.php";
 			break;
 	}
 
