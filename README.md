@@ -1,6 +1,8 @@
 SIS
 ===
 
+_ATTENTION : _ La connexion a la DB est differente : root/(vide) pour Windows et root/root pour Mac
+
 ## Journal
 Se servir de cet espace pour communiquer sur l'avancement, qui fait quoi, etc...
 
