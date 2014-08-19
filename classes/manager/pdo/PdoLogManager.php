@@ -1,6 +1,7 @@
 <?php
 
-require_once('protected/required.php');
+require_once('../classes/manager/pdo/AbstractPdoManager.php');
+require_once('../protected/required.php');
 
 class PdoLogManager extends AbstractPdoManager implements LogManager {
 

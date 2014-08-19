@@ -1,6 +1,6 @@
 <?php
 
-require_once('protected/required.php');
+require_once('../protected/required.php');
 
 class Rent {
 
@@ -13,9 +13,9 @@ class Rent {
     private $firstname;
     private $creationDate;
     private $endDate;
-    private $return;
+    private $is_return;
 
-    function __construct($id, $campusId, $authorId, $itemId, $idBooster, $lastname, $firstname, $creationDate, $endDate, $return)
+    function __construct($id, $campusId, $authorId, $itemId, $idBooster, $lastname, $firstname, $creationDate, $endDate, $is_return)
     {
         $this->itemId = $itemId;
         $this->id = $id;
@@ -26,7 +26,7 @@ class Rent {
         $this->firstname = $firstname;
         $this->creationDate = $creationDate;
         $this->endDate = $endDate;
-        $this->return = $return;
+        $this->is_return = $is_return;
     }
 
 
@@ -126,14 +126,14 @@ class Rent {
         return $this->lastname;
     }
 
-    public function setReturn($return)
+    public function setIsReturn($is_return)
     {
-        $this->return = $return;
+        $this->is_return = $is_return;
     }
 
-    public function getReturn()
+    public function getIsReturn()
     {
-        return $this->return;
+        return $this->is_return;
     }
 
 }
