@@ -19,5 +19,5 @@ require_once('classes/models/User.php');
 
 
 
-session_start();
+//session_start();
 ?>
