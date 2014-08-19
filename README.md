@@ -38,7 +38,6 @@ $head->printHead();
 ```
 
 * La page _news.php_ peut servir de squelette pour les autres pages
-* Pour ajouter un nouveau module : Créer une page _nomDuModule.php_ et une page _dbActionNomDuModule.php_ (si action avec la DB) et une classe nomDuModule.class.php (si pertinent)
 
 
 ## Utilisation
@@ -53,7 +52,7 @@ Au clic sur un lien (par exemple : News, pour le campus de Montpellier) :
 
 ## Todo
 
-* ~~Core~~
+* Core
 * DataBase (create and fill)
 * Core classes (users)
 * Files
