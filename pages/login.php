@@ -12,8 +12,8 @@
 			<div class="wrap">
 				<p class="form-title">Sign In</p>
 				<form class="login" action="authentication.php" method="POST">
-					<input type="text" placeholder="Username" />
-					<input type="password" placeholder="Password" />
+					<input type="text" placeholder="Username" name="idBooster" />
+					<input type="password" placeholder="Password" name="password" />
 					<input type="submit" value="Sign In" class="btn btn-success btn-sm" />
 				</form>
 			</div>
