@@ -1,11 +1,6 @@
 $(document).ready(function() {
 
-	// Si aucun campus n'est defini dans la navbar, on utilise le campus par defaut defini en cookie durant la connection
-	if ($('.navbar .campus').text('null'))
-		$('.navbar .campus').text(getCookie('defaultCampus'));
-	
-
-	campus 	= getActualCampusName();
+	var campus 	= getActualCampusName();
 
 	// Au clic sur un campus dans la sidebar, on change de campus (=> dans la navbar)
 	$('.campusName').click(function() {

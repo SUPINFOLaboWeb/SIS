@@ -2,6 +2,8 @@
 	
 	require '../config.php';
 
+	$campus = strtolower(htmlspecialchars($_POST['campus']));
+
 	switch ($_POST['page']) {	
 		case 'files' :
 			require 'files.php';
