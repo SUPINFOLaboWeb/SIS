@@ -3,9 +3,16 @@
 			<div class="col-sm-2 col-md-1 sidebar">
 				<ul class="nav nav-sidebar">
 					<?php
-						foreach ($campuses as $campusId => $campusName) {
-							echo '<li><a href="#" class="campusName" id="' . $campusName . '">' . $campusId . '</a></li>';
-						}
+						if (!isset($campusManager))
+							$campusManager = new PdoCampusManager;
+
+						$campuses = $campusManager->getCampuses();
+				        
+				        foreach($campuses as $campus){
+				            $campusName = $campus->getCampusName();
+				            $campusId	= strtoupper(substr($campusName, 0, 3));
+				            echo '<li><a href="#" class="campusName" id="' . $campusName . '">' . $campusId . '</a></li>';
+				        }
 					?>
 				</ul>
 			</div>
