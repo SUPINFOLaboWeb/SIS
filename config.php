@@ -6,14 +6,6 @@
 	if (session_status() !== PHP_SESSION_ACTIVE)
 		session_start();
 
-	$campuses = [
-		"CLE" => "clermont",
-		"GRE" => "grenoble",
-		"MAR" => "marseille",
-		"MON" => "montpellier",
-		"NIC" => "nice"
-	];
-
 	$modules = [
 		"files"		=> "Files",
 		"inventory"	=> "Inventory",
@@ -25,6 +17,4 @@
 		"todo"		=> "Todo List"
 	];
 
-	// Pendant le developpement seulement :
-	setcookie('defaultCampus', 'grenoble');
 ?>
