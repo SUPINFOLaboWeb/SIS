@@ -1,5 +1,5 @@
 <?php
-	require_once '../classes/head.class.php';
+	require_once '../classes/Head.class.php';
 	
 	$head = new head;
 	$head->setTitle('SIS');
