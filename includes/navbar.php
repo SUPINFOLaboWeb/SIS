@@ -10,8 +10,8 @@
 				<a class="navbar-brand" href="#">SIS</a>
 				<span class="navbar-brand campus">
 					<?php
-						/*if (isset($_SESSION['user']['campusName']))
-							echo $_SESSION['user']['campusName'];*/
+						if (isset($_SESSION['user']['campusName']))
+							echo $_SESSION['user']['campusName'];
 					?>
 				</span>
 			</div>
