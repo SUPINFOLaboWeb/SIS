@@ -1,7 +1,5 @@
 <?php
 
-	// Foo !
-
 	class head {
 		
 		private $_head;
