@@ -6,7 +6,7 @@
 	//header("Location: pages/login.php");
 
 	// Pendant la phase de developpement seulement :
-	header("Location: pages/news.php");
+	header("Location: pages/home.php");
 
 	ob_end_flush();
 	exit();
