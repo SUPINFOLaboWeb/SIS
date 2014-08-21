@@ -29,8 +29,13 @@
 					$_SESSION['user']['lastName']	= $user->getLastname();
 					$_SESSION['user']['campusId']	= $user->getCampusId();
 					
-					//$_SESSION['user']['campusName']	= $pdoCampusManager->getCampus($user->getCampusId());
-					//$_SESSION['user']['privilege']	= $pdoPrivilegeManager->getPrivilege($user->getPrivilegeId());
+					$_SESSION['user']['campusName']	= $pdoCampusManager
+														->getCampus($user->getCampusId())
+														->getCampusName();
+
+					$_SESSION['user']['privilege']	= $pdoPrivilegeManager
+														->getPrivilege($user->getPrivilegeId())
+														->getPrivilegeName();
 
 					header('Location: home.php') or die();
 				} else {
