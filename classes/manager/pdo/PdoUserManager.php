@@ -54,7 +54,7 @@ class PdoUserManager extends AbstractPdoManager implements UserManager {
         $results = $query -> fetchAll(PDO::FETCH_ASSOC);
         $users = array();
         foreach ($results as $result) {
-            $users[] = new User($result['id'], $result['id_booster'], $result['campus_id'], $result['privilege_id'], $result['lastname'], $result['firstname'], $result['password']);
+            $users[] = new User($result['id_booster'], $result['campus_id'], $result['privilege_id'], $result['lastname'], $result['firstname'], $result['password']);
         }
 
         $query -> closeCursor();

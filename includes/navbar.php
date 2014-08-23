@@ -8,7 +8,12 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#">SIS</a>
-				<span class="navbar-brand campus"></span>
+				<span class="navbar-brand campus">
+					<?php
+						if (isset($_SESSION['user']['campusName']))
+							echo $_SESSION['user']['campusName'];
+					?>
+				</span>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
