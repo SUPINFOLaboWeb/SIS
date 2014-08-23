@@ -9,8 +9,8 @@ class Campus {
 
     function __construct($id, $campusName)
     {
-        $this->id = $id;
-        $this->campusName = $campusName;
+        $this->id           = $id;
+        $this->campusName   = $campusName;
     }
 
     public function getJSON() {

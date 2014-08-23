@@ -11,10 +11,10 @@ class MeetingUser {
 
     function __construct($id, $userId, $meetingId, $status)
     {
-        $this->id = $id;
-        $this->userId = $userId;
-        $this->meetingId = $meetingId;
-        $this->status = $status;
+        $this->id           = $id;
+        $this->userId       = $userId;
+        $this->meetingId    = $meetingId;
+        $this->status       = $status;
     }
 
 

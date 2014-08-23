@@ -9,8 +9,8 @@ class Privilege {
 
     function __construct($id, $privilegeName)
     {
-        $this->id = $id;
-        $this->privilegeName = $privilegeName;
+        $this->id               = $id;
+        $this->privilegeName    = $privilegeName;
     }
 
 

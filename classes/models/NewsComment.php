@@ -12,11 +12,11 @@ class NewsComment {
 
     function __construct($id, $newsId, $authorId, $publicationDate, $content)
     {
-        $this->id = $id;
-        $this->newsId = $newsId;
-        $this->authorId = $authorId;
-        $this->publicationDate = $publicationDate;
-        $this->content = $content;
+        $this->id               = $id;
+        $this->newsId           = $newsId;
+        $this->authorId         = $authorId;
+        $this->publicationDate  = $publicationDate;
+        $this->content          = $content;
     }
 
 

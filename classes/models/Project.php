@@ -17,15 +17,15 @@ class Project {
 
     function __construct($id, $campusId, $creatorId, $projectId, $name, $creationDate, $deadlineDate, $progress, $description, $technologies)
     {
-        $this->id = $id;
-        $this->campusId = $campusId;
-        $this->creatorId = $creatorId;
-        $this->projectId = $projectId;
-        $this->name = $name;
+        $this->id           = $id;
+        $this->campusId     = $campusId;
+        $this->creatorId    = $creatorId;
+        $this->projectId    = $projectId;
+        $this->name         = $name;
         $this->creationDate = $creationDate;
         $this->deadlineDate = $deadlineDate;
-        $this->progress = $progress;
-        $this->description = $description;
+        $this->progress     = $progress;
+        $this->description  = $description;
         $this->technologies = $technologies;
     }
 

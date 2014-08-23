@@ -11,10 +11,10 @@ class ProjectUser {
 
     function __construct($id, $userId, $projectId, $status)
     {
-        $this->id = $id;
-        $this->userId = $userId;
-        $this->projectId = $projectId;
-        $this->status = $status;
+        $this->id           = $id;
+        $this->userId       = $userId;
+        $this->projectId    = $projectId;
+        $this->status       = $status;
     }
 
 

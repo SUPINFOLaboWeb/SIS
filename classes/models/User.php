@@ -13,12 +13,12 @@ class User {
 
     function __construct($idBooster, $campusId, $privilegeId, $lastname, $firstname, $password)
     {
-        $this->idBooster = $idBooster;
-        $this->campusId = $campusId;
-        $this->privilegeId = $privilegeId;
-        $this->lastname = $lastname;
-        $this->firstname = $firstname;
-        $this->password = $password;
+        $this->idBooster    = $idBooster;
+        $this->campusId     = $campusId;
+        $this->privilegeId  = $privilegeId;
+        $this->lastname     = $lastname;
+        $this->firstname    = $firstname;
+        $this->password     = $password;
     }
 
 

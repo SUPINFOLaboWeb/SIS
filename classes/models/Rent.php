@@ -17,16 +17,16 @@ class Rent {
 
     function __construct($id, $campusId, $authorId, $itemId, $idBooster, $lastname, $firstname, $creationDate, $endDate, $is_return)
     {
-        $this->itemId = $itemId;
-        $this->id = $id;
-        $this->campusId = $campusId;
-        $this->authorId = $authorId;
-        $this->idBooster = $idBooster;
-        $this->lastname = $lastname;
-        $this->firstname = $firstname;
+        $this->itemId       = $itemId;
+        $this->id           = $id;
+        $this->campusId     = $campusId;
+        $this->authorId     = $authorId;
+        $this->idBooster    = $idBooster;
+        $this->lastname     = $lastname;
+        $this->firstname    = $firstname;
         $this->creationDate = $creationDate;
-        $this->endDate = $endDate;
-        $this->is_return = $is_return;
+        $this->endDate      = $endDate;
+        $this->is_return    = $is_return;
     }
 
 

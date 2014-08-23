@@ -11,10 +11,10 @@ class News {
 
     function __construct($authorId, $content, $id, $publicationDate)
     {
-        $this->authorId = $authorId;
-        $this->content = $content;
-        $this->id = $id;
-        $this->publicationDate = $publicationDate;
+        $this->authorId         = $authorId;
+        $this->content          = $content;
+        $this->id               = $id;
+        $this->publicationDate  = $publicationDate;
     }
 
 

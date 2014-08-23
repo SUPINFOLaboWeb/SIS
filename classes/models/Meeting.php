@@ -16,15 +16,15 @@ class Meeting {
 
     function __construct($id, $creatorId, $projectId, $date, $duration, $subject, $description, $summary, $archive)
     {
-        $this->id = $id;
-        $this->creatorId = $creatorId;
-        $this->projectId = $projectId;
-        $this->date = $date;
-        $this->duration = $duration;
-        $this->subject = $subject;
-        $this->description = $description;
-        $this->summary = $summary;
-        $this->archive = $archive;
+        $this->id           = $id;
+        $this->creatorId    = $creatorId;
+        $this->projectId    = $projectId;
+        $this->date         = $date;
+        $this->duration     = $duration;
+        $this->subject      = $subject;
+        $this->description  = $description;
+        $this->summary      = $summary;
+        $this->archive      = $archive;
     }
 
 

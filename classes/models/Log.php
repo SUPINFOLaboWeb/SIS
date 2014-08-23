@@ -12,11 +12,11 @@ class Log {
 
     function __construct($id, $campusId, $authorId, $creationDate, $content)
     {
-        $this->id = $id;
-        $this->campusId = $campusId;
-        $this->authorId = $authorId;
+        $this->id           = $id;
+        $this->campusId     = $campusId;
+        $this->authorId     = $authorId;
         $this->creationDate = $creationDate;
-        $this->content = $content;
+        $this->content      = $content;
     }
 
 

@@ -16,15 +16,15 @@ class File {
 
     public function __construct($id = null, $creatorId = null, $parentId = null, $projectId = null, $name = null, $archive = null, $content = null, $creationDate = null, $isDirectory = null) {
 
-        $this -> id = $id;
-        $this -> creatorId = $creatorId;
-        $this -> parentId = $parentId;
-        $this -> projectId = $projectId;
-        $this -> name = $name;
-        $this -> archive = $archive;
-        $this -> content = $content;
-        $this -> creationDate = $creationDate;
-        $this -> isDirectory = $isDirectory;
+        $this->id           = $id;
+        $this->creatorId    = $creatorId;
+        $this->parentId     = $parentId;
+        $this->projectId    = $projectId;
+        $this->name         = $name;
+        $this->archive      = $archive;
+        $this->content      = $content;
+        $this->creationDate = $creationDate;
+        $this->isDirectory  = $isDirectory;
 
     }
 

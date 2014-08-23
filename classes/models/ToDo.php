@@ -13,12 +13,12 @@ class ToDo {
 
     function __construct($id, $campusId, $authorId, $creationDate, $content, $status)
     {
-        $this->id = $id;
-        $this->campusId = $campusId;
-        $this->authorId = $authorId;
+        $this->id           = $id;
+        $this->campusId     = $campusId;
+        $this->authorId     = $authorId;
         $this->creationDate = $creationDate;
-        $this->content = $content;
-        $this->status = $status;
+        $this->content      = $content;
+        $this->status       = $status;
     }
 
 

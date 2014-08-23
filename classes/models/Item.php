@@ -15,14 +15,14 @@ class Item {
 
     function __construct($id, $campusId, $type, $vendor, $model, $sn, $status, $comment)
     {
-        $this->id = $id;
+        $this->id       = $id;
         $this->campusId = $campusId;
-        $this->type = $type;
-        $this->vendor = $vendor;
-        $this->model = $model;
-        $this->sn = $sn;
-        $this->status = $status;
-        $this->comment = $comment;
+        $this->type     = $type;
+        $this->vendor   = $vendor;
+        $this->model    = $model;
+        $this->sn       = $sn;
+        $this->status   = $status;
+        $this->comment  = $comment;
     }
 
     public function getJSON() {
