@@ -11,7 +11,7 @@ Se servir de cet espace pour communiquer sur l'avancement, qui fait quoi, etc...
 	* Master - Modification de _core_.
 
 * __21/08/14__ : Jerome
-	* Master - Creation du dossier [fixtures](https://fr.wikipedia.org/wiki/Test_fixture) pour creer des donnees rapidement (par exemple : creer des fausses donnees)
+	* Master - Creation du dossier [fixtures](https://fr.wikipedia.org/wiki/Test_fixture) pour creer des donnees rapidement (par exemple : creer des fausses donnees dans la DB)
 	* Login - Creation de l'authentification : login/logout.
 	* Settings - Creation des parametres utilisateurs (changement de mot de passe).
 
