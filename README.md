@@ -4,8 +4,14 @@ SIS
 ## Journal
 Se servir de cet espace pour communiquer sur l'avancement, qui fait quoi, etc...
 
-* __10/08/14__ : Jerome - Création du _core_.
-* __20/08/14__ : Jerome - Modification de _core_.
+* __10/08/14__ : Jerome - Master - Création du _core_.
+* __20/08/14__ : Jerome - Master - Modification de _core_.
+* __21/08/14__ : Jerome - Master - Creation du dossier [fixtures](https://fr.wikipedia.org/wiki/Test_fixture) pour creer des donnees rapidement (par exemple : creer des fausses donnees)
+                          Login - Creation de l'authentification : login/logout.
+                          Settings - Creation des parametres utilisateurs (changement de mot de passe).
+* __23/08/14__ : Jerome - Master - Merge de Login sur Master => donc authentification possible
+                          Settings - Pas de changement de mot de passe possible. Seule l'UI est implémentée.
+                          News - Creation du module. Listing des News et des commentaires par News. Pas d'interaction possible
 
 ## Général
 
@@ -52,9 +58,9 @@ Au clic sur un lien (par exemple : News, pour le campus de Montpellier) :
 
 ## Todo
 
-* Core
+* ~Core~
 * DataBase (create and fill)
-* Core classes (users)
+* ~Core classes~
 * Files
 * Inventory
 * Logs
@@ -63,4 +69,5 @@ Au clic sur un lien (par exemple : News, pour le campus de Montpellier) :
 * Projects
 * Renting
 * Todo List
-* (User's) Settings
+* User's Settings
+* General Settings
