@@ -15,7 +15,7 @@
 		"meetings"	=> "Meetings",
 		"news"		=> "News",
 		"projects" 	=> "Projects",
-		"renting" 	=> "Renting",
+		"loan" 		=> "Loan",
 		"todo"		=> "Todo List"
 	];
 

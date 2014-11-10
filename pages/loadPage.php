@@ -29,8 +29,8 @@
 			require 'projects.php';
 			break;
 
-		case 'renting' :
-			require 'renting.php';
+		case 'loan' :
+			require 'loan.php';
 			break;
 
 		case 'todo' :
