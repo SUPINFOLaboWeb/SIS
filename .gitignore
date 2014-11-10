@@ -1,1 +1,2 @@
 classes/manager/pdo/AbstractPdoManager.php
+fixtures/passwordCreator.php
