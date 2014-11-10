@@ -44,7 +44,7 @@
 
 				?>
 
-					<input type="text" placeholder="Username" name="idBooster" />
+					<input type="text" placeholder="idBooster" name="idBooster" />
 					<input type="password" placeholder="Password" name="password" />
 					<input type="submit" value="Sign In" class="btn btn-success btn-sm" />
 				</form>
