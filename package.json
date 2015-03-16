@@ -1,0 +1,22 @@
+{
+  "name": "SIS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SUPINFOLaboWeb/SIS.git"
+  },
+  "contributors": [
+    "Emmanuel Gautier <manu.gautier1394@gmail.com>",
+    "Fabien Papet <fabien.papet@supinfo.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SUPINFOLaboWeb/SIS/issues"
+  },
+  "homepage": "https://github.com/SUPINFOLaboWeb/SIS"
+}
