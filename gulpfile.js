@@ -113,5 +113,5 @@ gulp.task('default', function() {
   gulp.watch(['./app/Resources/assets/js/**/*', './web/js/**/*'], ['uglify']);
 
   // Watch static files
-  gulp.watch(['./app/Resources/assets/**/*.*', '!./app/Resources/assets/templates/**/*.*', '!./app/Resources/assets/{less,js}/**/*.*'], ['copy']);
+  gulp.watch(['./app/Resources/assets/**/*.*', '!./app/Resources/assets/templates/**/*.*', '!./app/Resources/assets/{less}/**/*.*'], ['copy']);
 });
