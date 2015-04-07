@@ -1,7 +1,7 @@
-require(['angular', 'bootstrap'], 
-  function(angular, bootstrap) {
+require(['angular', 'bootstrap', 'app/app'], 
+  function(angular, bootstrap, app) {
     'use strict';
 
-    //angular.bootstrap(document, ['sis']);
+    angular.bootstrap(document, ['sis']);
   }
 );

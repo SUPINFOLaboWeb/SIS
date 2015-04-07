@@ -11,7 +11,8 @@ var lessPaths = [
 
 var angularJS = [
   'bower_components/angular/angular.js',
-  'bower_components/angular-resource/angular-resource.js'
+  'bower_components/angular-resource/angular-resource.js',
+  'bower_components/angular-route/angular-route.js'
 ];
 
 // These files are for your app's JavaScript
@@ -106,6 +107,8 @@ gulp.task('build', function() {
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
 gulp.task('default', function() {
+  sequence('build');
+
   // Watch Less
   gulp.watch(['./app/Resources/assets/less/**/*'], ['less']);
 
