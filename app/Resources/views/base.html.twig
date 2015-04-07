@@ -33,8 +33,10 @@
         </script>
         <script type="text/javascript" src="{{ asset('/js/lib/require.js') }}" data-main="main"></script>
     </head>
-    <body ng-cloak>
-        {% block body %}{% endblock %}
+    <body>
+        <div ng-cloak>
+            {% block body %}{% endblock %}
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
