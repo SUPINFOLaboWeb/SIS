@@ -97,19 +97,6 @@ gulp.task('uglify', function() {
   ;
 });
 
-// Starts a test server, which you can view at http://localhost:8080
-gulp.task('server', function() {
-  gulp.src('./web')
-    .pipe($.webserver({
-      port: 8080,
-      host: 'localhost',
-      fallback: 'index.html',
-      livereload: true,
-      open: true
-    }))
-  ;
-});
-
 // Builds your entire app once, without starting a server
 gulp.task('build', function() {
   sequence('clean', ['copy', 'less', 'uglify'], function() {
@@ -119,8 +106,6 @@ gulp.task('build', function() {
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
 gulp.task('default', function() {
-  sequence('build', 'server');
-
   // Watch Less
   gulp.watch(['./app/Resources/assets/less/**/*'], ['less']);
 
