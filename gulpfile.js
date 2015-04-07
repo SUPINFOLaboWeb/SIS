@@ -62,7 +62,7 @@ gulp.task('less', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie 10']
     }))
-    .pipe(gulp.dest('./public/css/'));
+    .pipe(gulp.dest('./web/css/'));
 });
 
 // Compiles and copies JavaScript files
