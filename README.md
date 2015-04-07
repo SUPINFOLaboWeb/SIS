@@ -10,5 +10,9 @@ Site Inter SIS
 cd ./SIS
 php -r "readfile('https://getcomposer.org/installer')" | php
 php composer.phar install
+npm install bower gulp -g
+npm install
+bower install
+gulp
 ```
 
