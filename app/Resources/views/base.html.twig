@@ -1,14 +1,39 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-        <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}SIS{% endblock %}</title>
+        <script type="text/javascript" src="{{ asset('/js/lib/modernizr.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/jquery.min.js') }}"></script>
+        <script type="text/javascript">
+            var require = {
+                baseUrl: "/js",
+                maps: {},
+                paths: {
+                    "angular": "lib/angular",
+                    "bootstrap": "lib/bootstrap",
+                },
+                shim: {
+                    "angular": {
+                        exports: "angular"
+                    },
+                    "bootstrap": {
+                        exports: "bootstrap",
+                        deps: ['angular']
+                    },
+                    "app/app": {
+                        deps: ['angular']
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" src="{{ asset('/js/lib/require.js') }}" data-main="main"></script>
     </head>
-    <body>
+    <body ng-cloak>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
