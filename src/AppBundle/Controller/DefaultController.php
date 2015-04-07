@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/template/{name}", name="app_template")
+     * @Route("/template/{name}", name="app_template",requirements={"name":"(.+)"})
      * @param $name
      * @return Response
      */
