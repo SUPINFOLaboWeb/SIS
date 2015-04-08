@@ -1,11 +1,15 @@
 define([
     'require', 'angular',
-    'app/config', 'app/run'
+    'app/config', 'app/run',
+    'app/resources/user',
+    'app/controllers/user'
   ],
 
   function(
     require, angular,
     config, run
+    User,
+    UserController
   ) {
     'use strict';
 
@@ -16,8 +20,10 @@ define([
     app.config(config);
 
     //load factories
+    app.factory('User', User);
 
     //load controllers
+    app.controller('UserController', UserController);
 
     app.run(run);
 
