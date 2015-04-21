@@ -99,15 +99,12 @@ gulp.task('uglify', function() {
 });
 
 // Builds your entire app once, without starting a server
-gulp.task('build', function() {
-  sequence('clean', ['copy', 'less', 'uglify'], function() {
-    console.log("Successfully built.");
-  })
+gulp.task('build', function(callback) {
+  sequence('clean', ['copy', 'less', 'uglify'], callback);
 });
 
 // Default task: builds your app, starts a server, and recompiles assets when they change
-gulp.task('default', function() {
-  sequence('build');
+gulp.task('default', ['build'], function() {
 
   // Watch Less
   gulp.watch(['./app/Resources/assets/less/**/*'], ['less']);
