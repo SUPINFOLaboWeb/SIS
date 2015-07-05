@@ -8,7 +8,7 @@ Site Inter SIS
 - Install all dependencies with composer by using composer install
 ```sh 
 cd ./SIS
-php -r "readfile('https://getcomposer.org/installer')" | php
+php -r "readfile('https://getcomposer.org/installer');" | php
 php composer.phar install
 npm install bower gulp -g
 npm install
