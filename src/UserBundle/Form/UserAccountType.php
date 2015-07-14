@@ -20,7 +20,8 @@ class UserAccountType extends BaseType
             ->add('lastname')
             ->add('campus',"entity", [
                     "property" => "name",
-                    "class" => "SupinfoBundle\\Entity\\Campus"
+                    "class" => "SupinfoBundle\\Entity\\Campus",
+                    'empty_value' => 'Choisissez un Campus',
                 ]
             )
         ;
