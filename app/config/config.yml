@@ -78,3 +78,6 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: UserBundle\Entity\UserAccount
+    registration:
+        form:
+            type: userbundle_useraccount

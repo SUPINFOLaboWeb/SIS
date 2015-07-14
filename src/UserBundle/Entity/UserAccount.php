@@ -4,6 +4,7 @@ namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use SupinfoBundle\Entity\Campus;
 
 /**
  * UserAccount
@@ -24,13 +25,6 @@ class UserAccount extends BaseUser
     protected $id;
 
     /**
-     * @var integer
-     * 
-     * @ORM\Column(type="integer")
-     */
-    protected $campus_booster_id;
-
-    /**
      * @var string
      * 
      * @ORM\Column(type="string", length=50)
@@ -45,9 +39,10 @@ class UserAccount extends BaseUser
     protected $lastname;
 
     /**
-     * @ORM\OneToMany(targetEntity="Campus", mappedBy="user")
+     * @ORM\ManyToOne(targetEntity="SupinfoBundle\Entity\Campus")
+     * @ORM\JoinColumn()
      */
-    //protected $campus;
+    protected $campus;
 
     /**
      * @ORM\ManyToMany(targetEntity="UserGroup")
@@ -61,7 +56,6 @@ class UserAccount extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        // your own logic
     }
 
     /**
@@ -72,29 +66,6 @@ class UserAccount extends BaseUser
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set campus_booster_id
-     *
-     * @param integer $campusBoosterId
-     * @return UserAccount
-     */
-    public function setCampusBoosterId($campusBoosterId)
-    {
-        $this->campus_booster_id = $campusBoosterId;
-
-        return $this;
-    }
-
-    /**
-     * Get campus_booster_id
-     *
-     * @return integer 
-     */
-    public function getCampusBoosterId()
-    {
-        return $this->campus_booster_id;
     }
 
     /**
@@ -141,5 +112,24 @@ class UserAccount extends BaseUser
     public function getLastname()
     {
         return $this->lastname;
+    }
+
+    /**
+     * Get User Campus
+     * @return Campus|null
+     */
+    public function getCampus()
+    {
+        return $this->campus;
+    }
+
+    /**
+     * @param Campus $campus
+     * @return $this
+     */
+    public function setCampus(Campus $campus)
+    {
+        $this->campus = $campus;
+        return $this;
     }
 }
