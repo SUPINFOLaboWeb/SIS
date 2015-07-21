@@ -13,4 +13,8 @@
 /node_modules/
 /composer.phar
 
+/web/js/
+/web/fonts/
+/web/css/
+
 /.idea/*
