@@ -1,11 +1,3 @@
-home:
-    path: /
-    defaults: { _controller: SupinfoBundle:App:index }
-
 posts:
     path: /posts
     defaults: { _controller: SupinfoBundle:Post:index }
-
-index:
-    path:     /
-    defaults: { _controller: SupinfoBundle:App:index }
