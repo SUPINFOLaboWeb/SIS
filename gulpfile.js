@@ -1,12 +1,11 @@
 var gulp       = require('gulp'),
     $          = require('gulp-load-plugins')(),
     rimraf     = require('gulp-rimraf'),
-    sequence   = require('run-sequence'),
-    path       = require('path');
+    sequence   = require('run-sequence');
 
 var lessPaths = [
   './app/Resources/assets/less',
-  'bower_components/bootstrap/less'
+  './bower_components/bootstrap/less'
 ];
 
 var angularJS = [
@@ -110,7 +109,7 @@ gulp.task('default', ['build'], function() {
   gulp.watch(['./app/Resources/assets/less/**/*'], ['less']);
 
   // Watch JavaScript
-  gulp.watch(['./app/Resources/assets/js/**/*', './web/js/**/*'], ['uglify']);
+  gulp.watch(['./app/Resources/assets/js/**/*'], ['uglify']);
 
   // Watch static files
   gulp.watch(['./app/Resources/assets/**/*.*', '!./app/Resources/assets/templates/**/*.*', '!./app/Resources/assets/{less}/**/*.*'], ['copy']);
