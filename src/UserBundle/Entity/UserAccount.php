@@ -13,7 +13,7 @@ use SupinfoBundle\Entity\Campus;
  * @ORM\Table(name="user_account")
  * @ORM\Entity(repositoryClass="UserBundle\Entity\UserAccountRepository")
  */
-class UserAccount extends BaseUser
+class UserAccount extends BaseUser implements \JsonSerializable
 {
     /**
      * @var integer
@@ -131,5 +131,25 @@ class UserAccount extends BaseUser
     {
         $this->campus = $campus;
         return $this;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.4.0)<br/>
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     */
+    function jsonSerialize()
+    {
+        return array(
+            "id" => $this->id,
+            "firstname" => $this->firstname,
+            "lastname" => $this->lastname,
+            "username" => $this->username,
+            "roles" => $this->getRoles(),
+            "campus" => $this->getCampus()->getName(),
+            "email" => $this->getEmail(),
+        );
     }
 }
