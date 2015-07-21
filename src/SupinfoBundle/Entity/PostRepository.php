@@ -19,12 +19,13 @@ class PostRepository extends EntityRepository
     public function getNewsForCampus(Campus $campus)
     {
         $query = $this->createQueryBuilder("p");
-        $query->select("partial p.{id,title,content}")
-            ->addSelect("partial u.{id,lastname, username}")
-            ->from("SupinfoBundle:Post","post")
+        $query
+            ->select("partial p.{id,title,createdAt, createdBy}")
+            ->addSelect("partial u.{id,username,firstname,lastname}")
             ->join("p.createdBy","u","u.id=p.createdBy")
             ->where("p.campus = :campus")
             ->orWhere("p.campus is null")
+            ->andWhere("p.flash = false")
             ->setParameter("campus", $campus)
         ;
         $res = $query->getQuery()->getScalarResult();

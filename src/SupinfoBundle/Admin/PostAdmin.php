@@ -18,6 +18,7 @@ class PostAdmin extends Admin
             ->add('createdAt')
             ->add('modifiedBy')
             ->add('campus')
+            ->add('flash')
         ;
     }
 
@@ -28,6 +29,7 @@ class PostAdmin extends Admin
             ->add('title')
             ->add('createdBy')
             ->add('createdAt')
+            ->add('flash')
         ;
     }
 
@@ -38,6 +40,7 @@ class PostAdmin extends Admin
             ->addIdentifier('id')
             ->add('title')
             ->add('createdBy')
+            ->add('flash')
         ;
     }
 }

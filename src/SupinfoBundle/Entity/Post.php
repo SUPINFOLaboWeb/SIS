@@ -31,6 +31,13 @@ class Post
     private $title;
 
     /**
+     * @var bool
+     *
+     * @ORM\Column(name="flash", type="boolean")
+     */
+    private $flash = false;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="content", type="text")
@@ -230,6 +237,25 @@ class Post
     public function setCampus(Campus $campus)
     {
         $this->campus = $campus;
+        return $this;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isFlash()
+    {
+        return $this->flash;
+    }
+
+    /**
+     * @param boolean $flash
+     * @return $this
+     */
+    public function setFlash($flash)
+    {
+        $this->flash = $flash;
+
         return $this;
     }
 }
