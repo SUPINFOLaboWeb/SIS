@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="sis"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" ng-app="sis"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" ng-app="sis"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" ng-app="sis"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,34 +10,17 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
         <script type="text/javascript" src="{{ asset('/js/lib/modernizr.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/lib/jquery.min.js') }}"></script>
-        <script type="text/javascript">
-            var require = {
-                baseUrl: "/js",
-                maps: {},
-                paths: {
-                    "angular": "lib/angular",
-                    "bootstrap": "lib/bootstrap",
-                },
-                shim: {
-                    "angular": {
-                        exports: "angular"
-                    },
-                    "bootstrap": {
-                        exports: "bootstrap",
-                        deps: ['angular']
-                    },
-                    "app/app": {
-                        deps: ['angular']
-                    }
-                }
-            };
-        </script>
-        <script type="text/javascript" src="{{ asset('/js/lib/require.js') }}" data-main="main"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/angular.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/bootstrap.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/app/app.js') }}"></script>
     </head>
-    <body>
-        <div ng-cloak>
-            {% block body %}{% endblock %}
-        </div>
+    <body ng-cloak ng-controller="AppCtrl">
+        <div ng-include="'/templates/partials/header.html'"></div>
+
+        {% block body %}<div ng-view></div>{% endblock %}
+
+        <div ng-include="'/templates/partials/footer.html'"></div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

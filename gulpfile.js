@@ -38,17 +38,13 @@ gulp.task('copy', function() {
   gulp.src(['./bower_components/modernizr/modernizr.js'])
     .pipe(gulp.dest('./web/js/lib/'));
 
-  // Require.js
-  gulp.src(['./bower_components/requirejs/require.js'])
-    .pipe(gulp.dest('./web/js/lib/'));
+  // Templates
+  gulp.src(['./app/Resources/assets/templates/**/*.html'])
+    .pipe(gulp.dest('./web/templates/'));
 
   // App
-  gulp.src(['./app/Resources/assets/js/**/*.js', '!./app/Resources/assets/js/main.js'])
+  gulp.src(['./app/Resources/assets/js/**/*.js'])
     .pipe(gulp.dest('./web/js/app/'));
-
-  // App main
-  return gulp.src(['./app/Resources/assets/js/main.js'])
-    .pipe(gulp.dest('./web/js/'));;
 });
 
 // Compiles Less
@@ -67,7 +63,7 @@ gulp.task('less', function() {
 
 // Compiles and copies JavaScript files
 gulp.task('uglify', function() {
-  // Foundation JavaScript
+  // Bootstrap JavaScript
   gulp.src('bower_components/bootstrap/dist/js/bootstrap.js')
     .pipe($.uglify({
       beautify: true,
@@ -112,5 +108,5 @@ gulp.task('default', ['build'], function() {
   gulp.watch(['./app/Resources/assets/js/**/*'], ['uglify']);
 
   // Watch static files
-  gulp.watch(['./app/Resources/assets/**/*.*', '!./app/Resources/assets/templates/**/*.*', '!./app/Resources/assets/{less}/**/*.*'], ['copy']);
+  gulp.watch(['./app/Resources/assets/**/*.*', '!./app/Resources/assets/{less}/**/*.*'], ['copy']);
 });

@@ -1,32 +1,16 @@
-define([
-    'require', 'angular',
-    'app/config', 'app/run',
-    'app/resources/user',
-    'app/controllers/user'
-  ],
+angular.module('sis', [
+  'ngRoute'
+]);
 
-  function(
-    require, angular,
-    config, run
-    User,
-    UserController
-  ) {
-    'use strict';
+angular.module('sis').config(['$locationProvider', function($locationProvider) {
+  $locationProvider.html5Mode({
+    enabled: true,
+    requireBase: false
+  });
 
-    var app = angular.module('sis', [
-      'ngRoute',
-    ]);
+  $locationProvider.hashPrefix('!');
+}]);
 
-    app.config(config);
+angular.module('sis').controller('AppCtrl', ['$scope', function($scope) {
 
-    //load factories
-    app.factory('User', User);
-
-    //load controllers
-    app.controller('UserController', UserController);
-
-    app.run(run);
-
-    return app;
-  }
-);
+}]);
