@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="sis"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" ng-app="sis"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" ng-app="sis"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" ng-app="sis"><!--<![endif]-->
+<html class="no-js" ng-app="sis" ng-csp="unsafe-eval; unsafe-inline">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <base href="/" />
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}SIS{% endblock %}</title>
+
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/app.css') }}">
+
         <script type="text/javascript" src="{{ asset('/js/lib/modernizr.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/lodash.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('/js/lib/jquery.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/lib/angular.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/lib/bootstrap.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('/js/app/app.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/angular.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/lib/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/js/app/app.min.js') }}"></script>
     </head>
+
     <body ng-cloak ng-controller="AppCtrl">
         <div ng-include="'/templates/partials/header.html'"></div>
 

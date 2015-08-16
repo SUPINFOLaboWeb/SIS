@@ -1,14 +1,27 @@
-{% trans_default_domain 'FOSUserBundle' %}<form action="{{ path("fos_user_security_check") }}" method="post">
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+{% trans_default_domain 'FOSUserBundle' %}
+<form role="form" ng-submit="login()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        
+        <h4 class="modal-title">Connexion</h4>
+    </div>
 
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+    <div class="modal-body">
+        <input type="hidden" name="_csrf_token" ng-model="token" value="{{ csrf_token }}" />
 
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
+        <div class="form-group">
+            <label for="username" class="control-label">{{ 'security.login.username'|trans }}</label>
+            <input type="text" id="username" name="username" class="form-control" ng-model="user.username" value="{{ last_username }}" required>
+        </div>
 
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+        <div class="form-group">
+            <label for="password" class="control-label">{{ 'security.login.password'|trans }}</label>
+            <input type="password" id="password" name="password" class="form-control" ng-model="user.password" required>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success" ng-disabled="form.$invalid">{{ 'security.login.submit'|trans }}</button>
+    </div>
 </form>
