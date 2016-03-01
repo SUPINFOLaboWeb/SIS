@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-
 framework:
     #esi:             ~
     translator:      ~
@@ -24,6 +23,8 @@ framework:
         handler_id:  ~
     fragments:       ~
     http_method_override: true
+    serializer:
+        enabled: true
 
 # Twig Configuration
 twig:
@@ -76,3 +77,16 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: UserBundle\Entity\UserAccount
+    registration:
+        form:
+            type: userbundle_useraccount
+
+
+# app/config/config.yml
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        # Your other blocks

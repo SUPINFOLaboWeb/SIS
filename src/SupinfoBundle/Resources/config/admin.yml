@@ -1,0 +1,21 @@
+services:
+    sonata.admin.post:
+        class: SupinfoBundle\Admin\PostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "News", label: "Post" }
+        arguments:
+            - ~
+            - SupinfoBundle\Entity\Post
+            - ~
+        calls:
+            - [ setTranslationDomain, [SupinfoBundle]]
+    sonata.admin.campus:
+        class: SupinfoBundle\Admin\CampusAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Supinfo", label: "Campus" }
+        arguments:
+            - ~
+            - SupinfoBundle\Entity\Campus
+            - ~
+        calls:
+            - [ setTranslationDomain, [SupinfoBundle]]

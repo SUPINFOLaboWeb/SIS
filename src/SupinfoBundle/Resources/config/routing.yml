@@ -1,0 +1,3 @@
+posts:
+    path: /posts
+    defaults: { _controller: SupinfoBundle:Post:index }
